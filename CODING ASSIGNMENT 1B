@@ -33,7 +33,7 @@ public class TotalPrice {
         totalPrice= ((price1*quantity1)+ (price2*quantity2)+ (price3*quantity3));
         
         
-			if(totalPrice <100 ) {
+		{       if(totalPrice <100 ) 
 				discount=0.1;
 			if(totalPrice>100)
 				discount=0.2;
