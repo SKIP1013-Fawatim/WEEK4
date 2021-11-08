@@ -1,0 +1,53 @@
+package assignment;
+import java.util.Scanner;
+public class TotalPrice {
+//8.11.2021
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		//declare variable
+		int items,quantity1,quantity2,quantity3;
+		double price1,price2,price3,total1,total2,total3,discount = 0,totalPrice,afterDiscount,pricePaid;
+		
+		System.out.print("Enter the number of items: ");
+        items = sc.nextInt();
+        
+        System.out.print("Enter the price of first items: RM");
+        price1=sc.nextDouble();
+        System.out.print("Enter the quantity of first items: ");
+        quantity1=sc.nextInt();
+        System.out.println();
+        
+        System.out.print("Enter the price of second items: RM");
+        price2=sc.nextDouble();
+        System.out.print("Enter the quantity of second items: ");
+        quantity2=sc.nextInt();
+        System.out.println();
+        
+        System.out.print("Enter the price of third items: RM");
+        price3=sc.nextDouble();
+        System.out.print("Enter the quantity of third items: ");
+        quantity3=sc.nextInt();
+        System.out.println();
+        
+        totalPrice= ((price1*quantity1)+ (price2*quantity2)+ (price3*quantity3));
+        
+        
+			if(totalPrice <100 ) {
+				discount=0.1;
+			if(totalPrice>100)
+				discount=0.2;
+		}
+		
+		afterDiscount = discount*totalPrice;
+		
+		pricePaid = totalPrice-afterDiscount;
+		
+		System.out.println("\nTotal price is: RM" + totalPrice);
+		System.out.println("Discount received is: RM"+ afterDiscount);
+		System.out.println("Price paid after discount: RM"+pricePaid);
+        		
+ 
+	}
+
+}
